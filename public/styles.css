@@ -1,0 +1,49 @@
+*, *::after, *::before {box-sizing: border-box; margin: 0;}
+
+input {
+    width: 270px;
+    height: 30px;
+    border-radius: 10px;
+    border: none;
+    box-shadow: inset 0 0 2px black;
+    text-align: center;
+    font-size: 16px;
+}
+
+input:focus {
+    outline: 1px solid red;
+}
+
+.signUpForm {
+    width: 400px;
+    height: 470px;
+    box-shadow: 0 0 10px black;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+}
+
+.signUpInput {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 70px;
+}
+
+.signUpBtn {
+    width: 200px;
+    height: 30px;
+    border-radius: 10px;
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
+    box-shadow: 0 0 2px black;
+}
+
+.error {
+    font-size: 12px;
+    color: red;
+}

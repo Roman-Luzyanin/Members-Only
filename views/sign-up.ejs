@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Sign Up</title>
+</head>
+<body>
+    <h1>Sign Up</h1>
+    <a href="/"><==</a>
+    <form action="/sign-up" method="POST" class="signUpForm">
+        <div class="signUpInput">
+            <input type="text" name="firstName" placeholder="First Name" />
+            <% if (locals.errors) { %>
+                <% errors.forEach(error => { %>
+                    <% if (error.path === 'firstName') { %>
+                        <p class="error"><%= error.msg %></p>
+                    <% } %>
+                <% }) %>
+            <% } %>
+        </div>
+        <div class="signUpInput">
+            <input type="text" name="lastName" placeholder="Last Name" />
+            <% if (locals.errors) { %>
+                <% errors.forEach(error => { %>
+                    <% if (error.path === 'lastName') { %>
+                        <p class="error"><%= error.msg %></p>
+                    <% } %>
+                <% }) %>
+            <% } %>
+        </div>
+        <div class="signUpInput">
+            <input type="email" name="email" placeholder="Email" />
+            <% if (locals.errors) { %>
+                <% errors.forEach(error => { %>
+                    <% if (error.path === 'email') { %>
+                        <p class="error"><%= error.msg %></p>
+                    <% } %>
+                <% }) %>
+            <% } %>
+        </div>
+        <div class="signUpInput">
+            <input type="password" name="password" placeholder="Password"/>
+            <% if (locals.errors) { %>
+                <% errors.forEach(error => { %>
+                    <% if (error.path === 'password') { %>
+                        <p class="error"><%= error.msg %></p>
+                    <% } %>
+                <% }) %>
+            <% } %>
+        </div>
+        <div class="signUpInput">
+            <input type="password" name="confirmation" placeholder="Confirmation"/>
+            <% if (locals.errors) { %>
+                <% errors.forEach(error => { %>
+                    <% if (error.path === 'confirmation') { %>
+                        <p class="error"><%= error.msg %></p>
+                    <% } %>
+                <% }) %>
+            <% } %>
+        </div>
+
+        <button type="submit" class="signUpBtn">Sign Up</button>
+    </form>
+</body>
+</html>
